@@ -90,14 +90,14 @@ namespace MenuSpace{
             }
             case GAME_CONNECT4:{
                 if(tick < logoTime){
-                    display.set2DPattern(3, "### ", 1);
-                    display.set2DPattern(2, "#   ", 1);
-                    display.set2DPattern(1, "#   ", 1);
                     display.set2DPattern(0, "### ", 1);
+                    display.set2DPattern(1, "#   ", 1);
+                    display.set2DPattern(2, "#   ", 1);
+                    display.set2DPattern(3, "### ", 1);
                     
-                    display.set2DPattern(2, " # #", 2);
-                    display.set2DPattern(1, " ###", 2);
-                    display.set2DPattern(0, "   #", 2);
+                    display.set2DPattern(1, " # #", 2);
+                    display.set2DPattern(2, " ###", 2);
+                    display.set2DPattern(3, "   #", 2);
                 }else{
                     switch(((tick-logoTime)/TEXT_SPEED)%9){
                         case 0: display.letter('C', 2); break;
@@ -117,10 +117,10 @@ namespace MenuSpace{
             case GAME_BATTLESHIP:{
 
                 if(tick < logoTime){
-                    display.set2DPattern(3, "  # ", 3);
-                    display.set2DPattern(2, " #  ", 1);
-                    display.set2DPattern(1, "####", 1);
-                    display.set2DPattern(0, "####", 2);
+                    display.set2DPattern(0, "  # ", 3);
+                    display.set2DPattern(1, " #  ", 1);
+                    display.set2DPattern(2, "####", 1);
+                    display.set2DPattern(3, "####", 2);
                 }else{
                     switch(((tick-logoTime)/TEXT_SPEED)%11){
                         case 0: display.letter('B', 1); break;
